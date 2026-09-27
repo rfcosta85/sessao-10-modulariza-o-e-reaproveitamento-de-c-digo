@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Checkout — Session Storage</title>
+
+    <link rel="stylesheet" href="02-sessionstorage.css">
+
+    <script src="02-sessionstorage.js" defer></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section aria-labelledby="checkout-title">
+
+            <h1 id="checkout-title">
+                Finalizar encomenda
+            </h1>
+
+            <p>
+                Os dados deste formulário serão mantidos
+                enquanto este separador estiver aberto.
+            </p>
+
+
+            <form id="checkout-form">
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Nome
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                    >
+
+                </div>
+
+
+                <fieldset>
+
+                    <legend>
+                        Método de entrega
+                    </legend>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="delivery"
+                            value="standard"
+                            required
+                        >
+
+                        Entrega standard
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="delivery"
+                            value="express"
+                        >
+
+                        Entrega express
+                    </label>
+
+                </fieldset>
+
+
+                <button type="submit">
+                    Continuar
+                </button>
+
+            </form>
+
+
+            <p
+                id="status"
+                aria-live="polite"
+            ></p>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
