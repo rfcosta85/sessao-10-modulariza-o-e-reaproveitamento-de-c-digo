@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Demonstração da diferença entre armazenamento em memória e localStorage."
+    >
+
+    <title>Web Storage — Demonstração</title>
+
+    <link rel="stylesheet" href="01-localstorage.css">
+
+    <script src="01-localstorage.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container">
+
+            <h1>Gestor de tarefas</h1>
+
+            <p>
+                Demonstração de armazenamento em memória
+                e armazenamento persistente.
+            </p>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <div class="container">
+
+            <!-- SEM STORAGE -->
+
+            <section
+                class="task-section"
+                aria-labelledby="memory-title"
+            >
+
+                <header class="section-header">
+
+                    <h2 id="memory-title">
+                        Sem localStorage
+                    </h2>
+
+                    <p>
+                        Os dados existem apenas enquanto
+                        a página estiver aberta.
+                    </p>
+
+                </header>
+
+
+                <form id="memory-form">
+
+                    <div class="form-group">
+
+                        <label for="memory-task">
+                            Nova tarefa
+                        </label>
+
+                        <input
+                            type="text"
+                            id="memory-task"
+                            placeholder="Ex.: Estudar JavaScript"
+                            required
+                        >
+
+                    </div>
+
+                    <button type="submit">
+                        Adicionar tarefa
+                    </button>
+
+                </form>
+
+
+                <ul
+                    id="memory-list"
+                    class="task-list"
+                >
+                </ul>
+
+            </section>
+
+
+            <!-- COM STORAGE -->
+
+            <section
+                class="task-section persistent-section"
+                aria-labelledby="storage-title"
+            >
+
+                <header class="section-header">
+
+                    <h2 id="storage-title">
+                        Com localStorage
+                    </h2>
+
+                    <p>
+                        As tarefas continuam disponíveis
+                        mesmo depois de atualizar a página.
+                    </p>
+
+                </header>
+
+
+                <form id="storage-form">
+
+                    <div class="form-group">
+
+                        <label for="storage-task">
+                            Nova tarefa
+                        </label>
+
+                        <input
+                            type="text"
+                            id="storage-task"
+                            placeholder="Ex.: Fazer exercício"
+                            required
+                        >
+
+                    </div>
+
+                    <button type="submit">
+                        Adicionar tarefa
+                    </button>
+
+                </form>
+
+
+                <ul
+                    id="storage-list"
+                    class="task-list"
+                >
+                </ul>
+
+
+                <button
+                    type="button"
+                    id="clear-storage"
+                    class="secondary-button"
+                >
+                    Limpar tarefas guardadas
+                </button>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                Demonstração educativa — Web Storage API
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
