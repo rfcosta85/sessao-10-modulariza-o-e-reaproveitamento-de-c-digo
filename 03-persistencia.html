@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferências do Utilizador</title>
+    <link rel="stylesheet" href="03-persistencia.css">
+</head>
+
+<body>
+
+    <main>
+        <h1>Preferências</h1>
+
+        <form id="user-form">
+
+            <div>
+                <label for="name">Nome:</label>
+                <input id="name" type="text" required>
+            </div>
+
+            <div>
+                <label for="theme">Tema:</label>
+                <select id="theme">
+                    <option value="light">Claro</option>
+                    <option value="dark">Escuro</option>
+                </select>
+            </div>
+
+            <button type="submit">
+                Guardar preferências
+            </button>
+
+        </form>
+
+        <p id="message" aria-live="polite"></p>
+
+        <section>
+            <h2>Dados guardados</h2>
+            <pre id="saved-data"></pre>
+            <button id="clear-button" type="button">
+            Limpar configurações
+        </button>
+        </section>
+        
+    </main>   
+
+    <script src="03-persistencia.js"></script>
+
+</body>
+</html>

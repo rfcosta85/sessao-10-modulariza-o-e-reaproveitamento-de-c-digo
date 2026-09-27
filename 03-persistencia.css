@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-background: #f1f5f9;
+    --color-surface: #ffffff;
+    --color-text: #1e293b;
+    --color-border: #cbd5e1;
+    --color-primary: #2563eb;
+    --color-primary-hover: #1d4ed8;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+
+    background-color: var(--color-background);
+    color: var(--color-text);
+
+    transition:
+        background-color 0.2s,
+        color 0.2s;
+}
+
+/* =========================
+   Tema escuro
+========================= */
+
+body[data-theme="dark"] {
+    --color-background: #0f172a;
+    --color-surface: #1e293b;
+    --color-text: #f8fafc;
+    --color-border: #475569;
+    --color-primary: #3b82f6;
+    --color-primary-hover: #60a5fa;
+}
+
+/* =========================
+   Main
+========================= */
+
+main {
+    width: min(90%, 700px);
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* =========================
+   Form
+========================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    padding: 2rem;
+
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgb(0 0 0 / 8%);
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-weight: 600;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 0.75rem;
+
+    font: inherit;
+    color: var(--color-text);
+
+    background-color: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+}
+
+button {
+    padding: 0.8rem 1rem;
+
+    font: inherit;
+    font-weight: 600;
+    color: #ffffff;
+
+    background-color: var(--color-primary);
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* =========================
+   Message
+========================= */
+
+#message {
+    min-height: 1.5rem;
+    margin-top: 1rem;
+
+    font-weight: 600;
+    text-align: center;
+}
+
+/* =========================
+   Dados guardados
+========================= */
+
+section {
+    margin-top: 2rem;
+    padding: 2rem;
+
+    background-color: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgb(0 0 0 / 8%);
+}
+
+pre {
+    margin-top: 1rem;
+    padding: 1rem;
+
+    overflow-x: auto;
+
+    background-color: #0f172a;
+    color: #e2e8f0;
+
+    border-radius: 8px;
+
+    font-family: "Courier New", monospace;
+}
+
+#clear-button {
+    margin-top: 1rem;
+    background-color: #dc2626;
+}
+
+#clear-button:hover {
+    background-color: #b91c1c;
+}
