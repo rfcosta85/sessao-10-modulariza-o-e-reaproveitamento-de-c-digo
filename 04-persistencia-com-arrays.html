@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lista de tarefas</title>
+
+    <link rel="stylesheet" href="04-persistencia-com-arrays.css">
+
+    <script src="04-persistencia-com-arrays.js" defer></script>
+</head>
+
+<body>
+
+    <main>
+
+        <h1>Lista de tarefas</h1>
+
+        <form id="task-form">
+
+            <label for="task-title">
+                Nova tarefa
+            </label>
+
+            <input
+                id="task-title"
+                type="text"
+                placeholder="Ex.: Estudar JSON"
+                required
+            >
+
+            <button type="submit">
+                Adicionar tarefa
+            </button>
+
+        </form>
+
+        <section aria-labelledby="tasks-title">
+
+            <h2 id="tasks-title">
+                As minhas tarefas
+            </h2>
+
+            <ul id="task-list"></ul>
+
+        </section>
+
+        <section aria-labelledby="storage-title">
+
+            <h2 id="storage-title">
+                JSON guardado no Storage
+            </h2>
+
+            <pre id="saved-data">Nenhum dado guardado.</pre>
+
+            <button id="clear-button" type="button">
+                Limpar tarefas
+            </button>
+
+        </section>
+
+        <p id="message" aria-live="polite"></p>
+
+    </main>
+
+</body>
+
+</html>
