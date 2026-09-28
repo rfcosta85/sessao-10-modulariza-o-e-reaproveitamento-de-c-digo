@@ -57,6 +57,7 @@ const storageForm = document.querySelector("#storage-form");
 const storageInput = document.querySelector("#storage-task");
 const storageList = document.querySelector("#storage-list");
 const clearStorageButton = document.querySelector("#clear-storage");
+
 const storedTasks = localStorage.getItem("tasks");
 
 let storageTasks = storedTasks

@@ -7,7 +7,7 @@ export function createTask(title) {
     };
 }
 
-export function countTasks(tasks) {
+export default function countTasks(tasks) {
 
     return tasks.length;
 }

@@ -6,11 +6,6 @@ const savedDataElement = document.querySelector("#saved-data");
 const clearButton = document.querySelector("#clear-button");
 const message = document.querySelector("#message");
 
-
-// =========================
-// Recuperar tarefas
-// =========================
-
 let tasks = [];
 
 const savedTasks = localStorage.getItem("tasks");
@@ -18,11 +13,6 @@ const savedTasks = localStorage.getItem("tasks");
 if (savedTasks) {
     tasks = JSON.parse(savedTasks);
 }
-
-
-// =========================
-// Mostrar tarefas
-// =========================
 
 function renderTasks() {
 
@@ -50,10 +40,6 @@ function renderTasks() {
 }
 
 
-// =========================
-// Adicionar tarefa
-// =========================
-
 form.addEventListener("submit", function (event) {
 
     event.preventDefault();
@@ -80,10 +66,6 @@ form.addEventListener("submit", function (event) {
 });
 
 
-// =========================
-// Limpar tarefas
-// =========================
-
 clearButton.addEventListener("click", function () {
 
     localStorage.removeItem("tasks");
@@ -95,10 +77,5 @@ clearButton.addEventListener("click", function () {
     message.textContent =
         "Todas as tarefas foram removidas.";
 });
-
-
-// =========================
-// Inicializar
-// =========================
 
 renderTasks();

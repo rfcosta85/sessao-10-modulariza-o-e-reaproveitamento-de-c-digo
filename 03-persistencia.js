@@ -8,18 +8,9 @@ const themeSelect = document.querySelector("#theme");
 const clearButton = document.querySelector("#clear-button");
 
 
-// =========================
-// Aplicar tema
-// =========================
-
 function applyTheme(theme) {
     document.body.dataset.theme = theme;
 }
-
-
-// =========================
-// Recuperar dados
-// =========================
 
 const savedData = localStorage.getItem("userPreferences");
 
@@ -36,10 +27,6 @@ if (savedData) {
         JSON.stringify(userPreferences, null, 2);
 }
 
-
-// =========================
-// Guardar dados
-// =========================
 
 form.addEventListener("submit", function (event) {
 
@@ -63,11 +50,6 @@ form.addEventListener("submit", function (event) {
     message.textContent =
         "Preferências guardadas!";
 });
-
-
-// =========================
-// Limpar configurações
-// =========================
 
 clearButton.addEventListener("click", function () {
 
